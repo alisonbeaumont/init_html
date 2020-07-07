@@ -44,12 +44,30 @@ Le caractère espace désigne "les enfants de"
     flex-direction:row;
 }
 
+#burger-btn {
+    display: none;
+}
+
 /**
 1ere regle de media:
+change flex direction for xs device
 */
 @media screen and (max-width: 576px) {
-    .flex-container {
+    nav ul.flex-container {
         flex-direction: column;
+        display: none;
+    }
+    #burger-btn {
+        display: block;
+        color: black;
+        display: inline-block;
+        border: solid 1px var(--light);
+        width: 8em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: var(--secondary);
     }
 }
 
