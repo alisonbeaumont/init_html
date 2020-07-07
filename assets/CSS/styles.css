@@ -44,6 +44,15 @@ Le caractère espace désigne "les enfants de"
     flex-direction:row;
 }
 
+/**
+1ere regle de media:
+*/
+@media screen and (max-width: 576px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
 nav ul li a {
     transform: rotate(0deg);
     text-decoration: none;
