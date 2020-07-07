@@ -1,0 +1,133 @@
+:root {
+    --title-color: rgb(51, 71, 189);
+    --main-color: #000000;
+    --main-font-size: 2em;
+    /**
+    *   Couleurs Bootstrap
+    **/
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b4;
+    --dark: #343a40;
+    --light: #ffffff;
+
+}
+
+/*
+Global styles
+    CSS rule : selector { property: property: property_value; }
+*/
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1em; /*em correpond à l'unité de ref définie dans la navigateur: 16px */
+    color: var(--main-color);
+}
+ul {
+    list-style-type: none;
+}
+
+nav { 
+    color:var(--light);
+}
+
+/* j'enleve deco et met tout en noir ds ts les a qui se trouvent 
+ds des li qui sont ds des ul ds nav.
+Le caractère espace désigne "les enfants de"
+*/
+
+.flex-container {
+    display: flex; 
+    flex-direction:row;
+}
+
+nav ul li a {
+    transform: rotate(0deg);
+    text-decoration: none;
+    color: inherit; /*la couleur sera hérité d'un ancêtre*/
+    
+}
+
+nav ul li a.btn {
+    transition: color 0.9s 0s ease-in, transform 0.4s 0.4s linear, background-color 0.8s 0.7s ease-out;
+}
+
+nav ul li a.btn:hover {
+    color:var(--dark);
+    background-color: var(--light);
+    transform: rotate(360deg);
+}
+
+/* le caractère "," permet de factoriser une regle a 
+plusieurs selecteurs */
+
+h1,h2,h3 {
+    margin: 0;
+    padding: 0; /* reset user agent stylesheet */
+    color: var(--title-color);
+}
+
+/* 
+Selecteurs "class"
+*/
+.dropdown {
+    color: var(--info);
+}
+
+abbr {
+    text-decoration: none;
+    font-weight:bold; 
+}
+
+.btn {
+    display: inline-block;
+    border: solid 1px var(--secondary);
+    width: 8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /*padding: 0.5em 1em 1em 0.5em;*/
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.shadowed {
+    box-shadow: var(--secondary) 1px 3px;
+}
+
+/* Selecteur sur un Id element 
+*/
+section{
+    height: 100vh;
+}
+
+#section-html {
+    background-color: var(--info);
+}
+
+#section-css {
+    background-color: var(--warning);
+}
+footer.bg-dark, footer.bg-light {
+    color: var (--light);
+}
+
+footer.bg-dark a, footer.bg-light a{
+    color: inherit;
+    text-decoration: none;
+}
+
+span[class^="icon-"] {
+    margin-right: 0.3em;
+}
