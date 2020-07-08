@@ -14,6 +14,7 @@
 
         <link href="./assets/css/styles.css" rel="stylesheet" >
         <link href="./assets/css/layout.css" rel="stylesheet">
+        <link href="./assets/css/forms.css" rel="stylesheet">
         
         <!-- Load icomoon styles -->
         <link href="./assets/css/style.css" rel="stylesheet" >
@@ -28,12 +29,12 @@
     -->
     <body>
         <header class="row">
-            <h1 class="col-12 col-xl-4"> Découvrir le HTML </h1>
-            <p class= "col-12 col-xl-8">
+            <h1 class="col-12 col-xl-8"> Découvrir le HTML </h1>
+            <p class= "col-12 col-xl-4">
                 L'histoire du <abbr title="Hyper Text Markup Language" class="dropdown" >HTML</abbr> à travers les âges.
             </p>
         </header>
-        <nav class="bg-dark">
+        <nav class="bg-dark col-12 col-xl-12">
             <!--
                 Burger menu button
                 displayed only when device width <= 578px
@@ -92,39 +93,9 @@
                             <a href="https://www.w3.org" title="W3C" target="_new">
                                 Bloc tags
                             </a>
-                            <br>
                             <a href="section-html.html" class="btn bg-light" title= "section-html.html"> 
                                 En savoir plus
                             </a>
-                            </br>
-                            <nav class="bg-dark">
-                                <ul>
-                                    <li>Nos réseaux sociaux
-                                        <ul>
-                                            <li>
-                                                <span class="icon-facebook2"></span>
-                                                <a href= "https://facebook.com" target="_new" title="Follow Us">Facebook</a>
-            
-                                            </li>
-                                            <li>
-                                                <span class="icon-instagram"></span>
-                                                <a href= "https//instagram.fr" target="_new" title="Follow Us" >Insta</a>
-                                            </li>
-                                            <li>
-                                                <span class="icon-lanyrd"></span>
-                                                <a href= "https//linkedin.fr" target="_new" title="Follow Us" >Linkedin</a>
-                                            </li>
-                                            <li>
-                                                <span class="icon-youtube"></span>
-                                                <a href= "https//youtube.fr" target="_new" title="Follow Us" >Youtube</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <!--Lien externe vers un téléphone-->
-                                </ul>
-                            </nav>
-                            </cite>
                         </cite>
                     </footer>
             </article>
@@ -137,8 +108,60 @@
                 </p>
             </header>
         </section>
-        <h2>HTML: web sémantique</h2>
     </main>
+    <footer>
+        <nav class="bg-dark">
+            <ul>
+                <li>Nos réseaux sociaux
+                    <ul>
+                        <li>
+                            <span class="icon-facebook2"></span>
+                            <a href= "https://facebook.com" target="_new" title="Follow Us">Facebook</a>
+
+                        </li>
+                        <li>
+                            <span class="icon-instagram"></span>
+                            <a href= "https//instagram.fr" target="_new" title="Follow Us" >Insta</a>
+                        </li>
+                        <li>
+                            <span class="icon-lanyrd"></span>
+                            <a href= "https//linkedin.fr" target="_new" title="Follow Us" >Linkedin</a>
+                        </li>
+                        <li>
+                            <span class="icon-youtube"></span>
+                            <a href= "https//youtube.fr" target="_new" title="Follow Us" >Youtube</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!--Lien externe vers un téléphone-->
+            </ul>
+        </nav>
+    </footer>
+    <!--Template pour l'affichage du formulaire de contact-->
+    <!--<template id="form-template">-->
+        <!-- form c'est un ensemble de champs (ou controles de formulaire)-->
+        <h2>Contactez le service client</h2>
+        <form>
+            <div>
+            <input type="text" name="name-ctrl" id="name-ctrl" placeholder="votre nom...">
+            </div>
+
+            <div>
+                <input type="email" name="email-ctrl" id="email-ctrl" placeholder="votre email (*)..."required>
+            </div>
+
+            <div>
+                <label class="required">Objet de votre demande</label>
+                <textarea name="object-ctrl" id="object-ctrl"></textarea>
+            </div>
+
+            <div>
+                <button id="send-btn" type="submit">Envoyer</button>
+            </div>
+        </form>
+    <!--</template>-->
+    <!--fin du template pour l'affichage de formulaire-->
     </body>
 
 </html>
